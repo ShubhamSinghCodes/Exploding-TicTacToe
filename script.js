@@ -114,6 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (isExplodableBomb || isExplodableFuseEnd) {
             if (Math.random() < 0.5) {
+                cellData.marker = currentPlayer;
+                updateCellElementState(getElement(row, col), cellData);
                 triggerExplosion(row, col, !isExplodableFuseEnd);
                 // Explosion handles turn continuation
             } else {
@@ -193,10 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     cellData.hasBomb = false; // Bomb vanishes
                     if (cellData.marker) { // Flip existing marker if there is one
                         cellData.marker = cellData.marker === 'X' ? 'O' : 'X';
-                    }
-                    // If the trigger cell was also a bomb, ensure its marker is flipped
-                    if (coord.row === row && coord.col === col && !cellData.marker) {
-                        cellData.marker = currentPlayer === 'X' ? 'O' : 'X';
                     }
                     updateCellElementState(cellEl, cellData);
                 }

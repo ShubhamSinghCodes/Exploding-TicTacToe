@@ -22,7 +22,7 @@ The goal is to get 5 of your markers in a horizontal, vertical, or diagonal row.
     * Fuses are directional, going from a "from" cell to a "to" cell.
     * Fuses can only be placed from a bomb containing cell or an end of a fuse chain to an orthogonally adjacent cell.
 * **Explosions:** Explosions can occur when a player places their marker on a cell containing a bomb (not in middle of a fuse chain), or on a cell at the end of a fuse chain. These explosions occur with a 50% chance of exploding on placement.
-* **Explosion Effects:** Cells containing a marker will switch to the other player's marker. In a fuse chain, only the cells containing a bomb will switch.
+* **Explosion Effects:** During an explosion, exploding cells containing a marker will **flip** to the other player's marker. In a fuse chain, only the cells containing a bomb will **flip**.
 * **Game End:** The game ends when a player achieves 5 in a row or when the board is full (resulting in a draw if no player has won).
 
 ## Development

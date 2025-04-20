@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploding Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container" id="game-container">
+        <h1>Exploding Tic Tac Toe</h1>
+        <h2><a href="https://github.com/ShubhamSinghCodes/Exploding-TicTacToe">Rules on Github</a></h2>
+
+        <div class="controls">
+            <div class="status" id="status-message">Player X's Turn</div>
+            <div class="action-selector">
+                <span>Action:</span>
+                <button class="action-button active" data-action="placeMarker">Place Marker</button>
+                <button class="action-button" data-action="placeBomb">Place Bomb</button>
+                <button class="action-button" data-action="placeFuse">Place Fuse</button>
+            </div>
+            </div>
+
+        <div class="board-wrapper">
+             <div id="fuse-layer"></div> <div id="game-board">
+                </div>
+        </div>
+
+
+        <div class="win-message" id="win-message"></div>
+        <button id="reset-button">New Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

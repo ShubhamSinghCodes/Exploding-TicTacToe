@@ -213,8 +213,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check win AFTER state changes, with buffer
         setTimeout(() => {
             if (!checkWin()) {
-                // Player continues turn, reset status message if game not over
-                if (!gameOver) updateStatus();
+                // Next player's turn, reset status message if game not over
+                if (!gameOver) {
+                    switchPlayer();
+                    updateStatus();
+                }
             } else {
                 clearHighlights(); // Game ended
             }
